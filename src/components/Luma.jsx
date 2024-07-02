@@ -77,8 +77,8 @@ export default function Luma(props)
 useFrame( ( state, delta ) =>
 {
     gsap.to( self.current.rotation, {
-        x: gsap.utils.mapRange( 0, window.innerWidth, -.2, .2, y ),
-        y: gsap.utils.mapRange( 0, window.innerHeight, -.2, .2, x )
+        x: gsap.utils.mapRange( 0, window.innerWidth, -.07, .07, y ),
+        y: gsap.utils.mapRange( 0, window.innerHeight, -.07, .07, x )
       })
 } )
 
