@@ -1,4 +1,4 @@
- float fresnelFactor( float amount, float offset, vec3 normal, vec3 view)
+ float fresnelFactor( float amount, vec3 normal, vec3 view)
 {
-    return offset + ( 1.0 - offset ) * pow( 1.0 - dot( normal , view ), amount );
+    return pow( 1.0 - max( dot( normal, view ), 0.0 ), amount );
 }

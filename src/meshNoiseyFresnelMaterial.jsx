@@ -8,12 +8,11 @@ import { useRef } from "react"
 export default function MeshNoiseyFresnelMaterial({
     baseColor = '#a0b4fd', // base color
     glowColor = '#ffa360', // glow color for backface
-    speedOffset = 2.00, // speed animation offset
-    fresnelAmount = 1.00, // power factor for fresnel
-    fresnelOffset = 0.02, // offset factor of fresnel
+    speedOffset = 1.5, // speed animation offset
+    fresnelAmount = 4.00, // power factor for fresnel
     fresnelColorIntensity = 1.25, // fresnel color brightness
-    frenselBlend = 0.20, // blend of noise and fresnel
-    noiseOffset = 5, // scale noise
+    frenselBlend = 0.25, // blend of noise and fresnel
+    noiseOffset = 8.5, // scale noise
 })
 {
 
@@ -25,7 +24,6 @@ export default function MeshNoiseyFresnelMaterial({
         uBaseColor: new Color( baseColor ),
         uGlowColor: new Color( glowColor ),
         uFresnelAmount: fresnelAmount,
-        uFresnelOffset: fresnelOffset,
         uFresnelIntensity: fresnelColorIntensity,
         uFrenselBlend: frenselBlend,
         uNoiseOffset: noiseOffset,

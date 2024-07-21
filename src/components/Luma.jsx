@@ -21,43 +21,36 @@ export default function Luma(props)
 
   const { x, y } = useMouse()
 
-  const { colorBase, colorFresnel, noiseSpeed, noiseOffset, fresnelAmt, fresnelOffset, fresnelIntensity, fresnelBlend } = useControls({
+  const { colorBase, colorFresnel, noiseSpeed, noiseOffset, fresnelAmt, fresnelIntensity, fresnelBlend } = useControls({
     colorBase:
     {
-        value: '#a0b4fd'
+        value: '#aa5939'
     }, 
     colorFresnel:
     {
-        value: '#ffa360'
+        value: '#f2b717'
     }, 
     noiseSpeed:
     {
-        value: 2.00,
+        value: 1.5,
         min: 0,
         max: 10,
         step: 0.001
     }, 
     noiseOffset:
     {
-        value: 5,
+        value: 8.5,
         min: 1,
         max: 50,
         step: 0.001
     },
     fresnelAmt:
     {
-        value: 1.00,
+        value: 4.00,
         min: 0,
         max: 10,
         step: 0.001
     }, 
-    fresnelOffset:
-    {
-        value: 0.02,
-        min: 0.00001,
-        max: 5,
-        step: 0.001
-    },
     fresnelIntensity:
     {
         value: 1.25,
@@ -67,7 +60,7 @@ export default function Luma(props)
     },
     fresnelBlend:
     {
-        value: 0.20,
+        value: 0.25,
         min: 0,
         max: 1,
         step: 0.001
@@ -91,7 +84,6 @@ useFrame( ( state, delta ) =>
                 glowColor={ colorFresnel }
                 speedOffset={ noiseSpeed }
                 fresnelAmount={ fresnelAmt }
-                fresnelOffset={ fresnelOffset }
                 fresnelColorIntensity={ fresnelIntensity }
                 noiseOffset={ noiseOffset }
                 frenselBlend={ fresnelBlend }

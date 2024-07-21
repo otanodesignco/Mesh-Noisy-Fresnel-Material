@@ -6,7 +6,6 @@ varying vec3 vWorldPosition;
 varying vec3 vWorldNormal;
 varying vec3 vViewPosition;
 varying float vNoise;
-varying vec2 vUv;
 
 #include ../shaders/includes/simplexNoise4d.glsl
 
@@ -23,7 +22,6 @@ void main()
     gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
 
     // Varyings
-    vUv = uv;
     vWorldPosition = worldPosition.xyz;
     vWorldNormal = normalize( worldNormals.xyz );
     vViewPosition = normalize( viewPosition );
